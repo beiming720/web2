@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>魂系游戏-首页</title>
+	<style type="text/css">
+	body{
+	background-image:url("dabeijing.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	}
+		#nav{
+			display:flex;
+			background:rgba(0,0,0,.8);
+			width: 100%;
+			height: 50px;
+			justify-content: space-around;
+			align-items: center;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 5px;
+			
+		}
+		#img1{
+			height: 50px;
+		}
+
+		#index{
+			display: block;
+			float: left;
+			width: 90px;
+			height: 30px;
+			line-height:30px;
+			text-align: center;
+			font-size: 20px;
+			color:#C5C5C5;
+			text-decoration: none;
+			background-image: url("xue.png");
+			background-size: 90px 48px;
+	
+	
+		}
+		.normal{
+			display: block;
+			float: left;
+			width: 90px;
+			height: 30px;
+			line-height:30px;
+			text-align: center;
+			font-size: 20px;
+			color:#C5C5C5;
+			text-decoration: none;
+		}
+		.normal:hover{
+			background-image: url("xue.png");
+			background-size: 90px 48px;
+			
+		}
+		.zixun{
+			display: block;
+			float: left;
+			width: 400px;
+			height: 30px;
+			font-size: 15px;
+			color:#C5C5C5;
+			text-decoration: none;
+			background-size: 400px 48px;
+			white-space: nowrap;
+		}
+		.zixun:hover {  
+            color: red; 
+        }  
+		#youxi1{
+			position: absolute;
+			left: 15%;
+			top:9%;
+			display: block;
+			background:rgba(0,0,0,.6);
+			background-image: url("hunlei.png");
+			width: 350px;
+			height: 100px;
+			
+		}
+/*
+		#youxi1:hover {  
+    		background-image: url("hunlei1.png");  鼠标悬停时的背景图片   
+		} 
+*/
+		#youxi2{
+			position: absolute;
+			left: 15%;
+			top:52%;
+			display: block;
+			background:rgba(0,0,0,.6);
+			background-image: url("leihun.png");
+			width: 210px;
+			height: 100px;
+		}
+/*
+		#youxi2:hover {  
+    		background-image: url("leihun1.png");  鼠标悬停时的背景图片   
+		} 
+*/
+		#youxi3{
+			position: absolute;
+			right: 15.3%;
+			top:52%;
+			display: block;
+			background:rgba(0,0,0,.6);
+			background-image: url("qita.png");
+			width: 130px;
+			height: 100px;
+		}
+/*
+		#youxi3:hover {  
+    		background-image: url("qita1.png");  鼠标悬停时的背景图片   
+		}
+*/
+		#id2{
+			display:flex;
+			position: relative;
+			background:rgba(0,0,0,.8);
+			width: 100%;
+			height: 410px;
+			margin-top: 5px;
+			justify-content: space-around;
+			align-items: center;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 5px 5px 0 0;
+		}
+		#id2-left{
+			position: absolute;
+			top:150px;
+			left: 0px;
+			width: 25px;
+			height: 70px;
+			background-color: #00000050;
+			color: #ccc;
+			text-align: center;
+			line-height: 70px;
+			border-radius: 0 5px 5px 0;
+		}
+		#id2-right{
+			position:absolute;
+			top:150px;
+			right: 0px;
+			width: 25px;
+			height: 70px;
+			background-color: #00000050;
+			color: #ccc;
+			text-align: center;
+			line-height: 70px;
+			border-radius: 5px 0px 0px 5px;
+		}
+		#id2-xia{
+			position:absolute;
+			bottom: 0px;
+			right: 40%;
+			width: 200px;
+			height: 50px;
+			background-color:#00000090;
+			color: #ccc;
+			text-align: center;
+			line-height: 70px;
+			border-radius: 5px 5px 0px 0px;
+		}
+		
+		#id3{
+			display:flex;
+			background:rgba(0,0,0,.8);
+			width: 100%;
+			height: 260px;
+			margin-top: 5px;
+   			border-radius: 0px 0px 5px 5px;
+			justify-content:center;
+			align-items: center;
+			margin-left: auto;
+			margin-right: auto;
+
+			
+		}
+		#id4{
+			display: flex;
+			background:rgba(0,0,0,.6);
+			height: 260px;
+			width: 400px;
+			color: aliceblue;
+		}
+		#id5{
+			display: flex;
+			position:relative;
+			background:rgba(255,255,255,.2);
+			height: 260px;
+			width: 503.9px;
+		}
+		.id2-img img{
+			width: 100%;
+            margin: 0 auto;
+            padding-top: 30px;
+			height: 400px;
+		}
+		
+		.imgBox{
+            position:absolute;
+        }
+
+        .imgBox img{
+            height: 400px;
+        }
+		#yinyue{
+			position:absolute;
+			width:50px;
+			top:1%;
+			right:2%;
+			
+		}
+		
+	</style>
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+      document.addEventListener("DOMMouseScroll",fun1);
+      window.onwheel = fun1;
+      
+      function fun1(){
+    	  document.getElementById("div1").style.backgroundColor = "green";
+      }
+      
+    </script><div id ="nav"> 
+		<img  id = "img1" src="R-C.jpg"/>
+	    <a href="#" id="index">首页</a>
+		<a href="web2-1/index1.html" class="normal">魂类</a>
+		<a href="#" class="normal">类魂</a>
+		<a href="https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_default" class="normal">其他</a>
+	</div>
+	<div id="id2">
+	<script type="text/javascript">
+		var a=0;
+		function next(){
+			a++;
+			var pic = document.getElementById('img-slide img1');
+			if(a>5){
+				a=0;
+			}
+			pic.src =a+".jpg";
+		}
+    </script>
+	<div class="imgBox">
+    <img id="img-slide img1" src="0.jpg" alt="0">
+	<span id="id2-xia" onclick="next()">↓</span>
+    </div>
+			
+	</div>
+
+	<div id="id3">
+		<div id="id4">
+			<p>资讯:<br/>
+			<a href="#" class="zixun">1.《黑暗之魂3》怎么环取；</a><br/><br/>
+			<a href="#" class="zixun">2.《艾尔登法环》名刀.月隐在哪获得；</a><br/><br/>
+			<a href="#" class="zixun">3.《匹诺曹的谎言》dlc什么时候上线；</a><br/><br/>
+			<a href="#" class="zixun">4.《仁王1》和《仁王2》那个更好玩呢；</a><br/><br/>
+			<a href="#" class="zixun">5. 为什么说《黑暗之魂2》被删除魂籍了呢。</a><br/>
+			<a href="#" class="zixun">..............</a></p>
+		</div>
+		
+
+		
+		<script>  
+    		function youxi1change(e) {  
+        		e.style.backgroundImage = "url('hunlei1.png')";  
+    		}  
+			function youxi1re(e){
+				e.style.backgroundImage = "url('hunlei.png')";
+			}
+			function youxi2change(e) {  
+        		e.style.backgroundImage = "url('leihun1.png')";  
+    		}  
+			function youxi2re(e){
+				e.style.backgroundImage = "url('leihun.png')";
+			}
+			function youxi3change(e) {  
+        		e.style.backgroundImage = "url('qita1.png')";  
+    		}  
+			function youxi3re(e){
+				e.style.backgroundImage = "url('qita.png')";
+			}
+		</script>  
+
+		<div id="id5">
+			<a href="web2-1/index1.html" id="youxi1" onmouseover="youxi1change(this)" onmouseout="youxi1re(this)"></a>
+			<a href="#" id="youxi2" onmouseover="youxi2change(this)" onmouseout="youxi2re(this)"></a>
+			<a href="https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_default" id="youxi3" onmouseover="youxi3change(this)" onmouseout="youxi3re(this)"></a>
+		</div>
+		
+		
+	</div>
+	<script type="text/javascript">  
+	function kongzhi() {  
+		var kongzhikaiguan = document.getElementById("yinyue");  
+		var yinyue = document.getElementById("aud");   
+		var currentSrc = kongzhikaiguan.src.split('/').pop();   
+
+		if (currentSrc === "001.png") {  
+			yinyue.play();  
+			kongzhikaiguan.src = "002.png"; 
+		} else {  
+			yinyue.pause(); 
+			kongzhikaiguan.src = "001.png"; 
+		}  
+	}  
+	</script>  
+	<audio src="beijingyinyue.mp3" id="aud" loop></audio>  
+	<img id="yinyue" src="001.png" onclick="kongzhi()">
+	
+</body>
+
+</html>
