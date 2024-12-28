@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<script type="text/javascript" src="D:\HBuilderX\plugins\templates\file\js\jquery-3.4.1.min.js"></script>
 		<script type="text/javascript">
 			function question1(){
 				alert("There is nothing in this option");
@@ -85,6 +86,38 @@
 			  else{
 				  next();
 			  }
+			}
+			function changestyle2(){
+				$(".second").css("color","crimson");
+				$(".second").css("font-size","20px");
+			}
+			function resetstyle2(){
+				$(".second").css("color","");
+				$(".second").css("font-size","15px");
+			}
+			function changestyle3(){
+				$(".third").css("color","crimson");
+				$(".third").css("font-size","20px");
+			}
+			function resetstyle3(){
+				$(".third").css("color","");
+				$(".third").css("font-size","15px");
+			}
+			function changestyle4(){
+				$(".forth").css("color","crimson");
+				$(".forth").css("font-size","20px");
+			}
+			function resetstyle4(){
+				$(".forth").css("color","");
+				$(".forth").css("font-size","15px");
+			}
+			function changestyle5(){
+				$(".fifth").css("color","crimson");
+				$(".fifth").css("font-size","20px");
+			}
+			function resetstyle5(){
+				$(".fifth").css("color","");
+				$(".fifth").css("font-size","15px");
 			}
 		</script>
 		<style type="text/css">
@@ -249,7 +282,7 @@
 				color: crimson;
 				font-size: 35px;
 			}
-			.second:hover{
+			/* .second:hover{
 				color: crimson;
 				font-size: 20px;
 			}
@@ -264,7 +297,7 @@
 			.fifth:hover{
 				color: crimson;
 				font-size: 20px;
-			}
+			} */
 			.second{
 				transition: color 0.2s ease;
 			}
@@ -290,10 +323,10 @@
 	<body onwheel="handleWheel(event)">
 		<ul>
 			<li id="first" class="txt1" onclick="location.href='https://ys.mihoyo.com'">言er</li>
-			<li class="second" onclick="location.href='https://beiming720.github.io/web2/'">首页</li>
-		    <li class="third" onclick="location.href='https://beiming720.github.io/web2/web2-1/index1.html'">魂类游戏</li>
-			<li class="forth" onclick="tip()">类魂游戏</li>
-			<li class="fifth" onclick="location.href='https://store.steampowered.com/'">其他</li>
+			<li class="second" onmouseover="changestyle2()" onmouseout="resetstyle2()" onclick="location.href='https://beiming720.github.io/web2/'">首页</li>
+		    <li class="third" onmouseover="changestyle3()" onmouseout="resetstyle3()" onclick="location.href='https://beiming720.github.io/web2/web2-1/index1.html'">魂类游戏</li>
+			<li class="forth" onmouseover="changestyle4()" onmouseout="resetstyle4()" onclick="tip()">类魂游戏</li>
+			<li class="fifth" onmouseover="changestyle5()" onmouseout="resetstyle5()" onclick="location.href='https://store.steampowered.com/'">其他</li>
 		</ul>
 		<img src="BlackMythWukong.jpg" class="img1" id="num1" onclick="location.href='https://heishenhua.com/'"/>
 		<button type="button" class="page1" onclick="last(this)">◁</button>
