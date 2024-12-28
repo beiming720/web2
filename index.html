@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>魂系游戏-首页</title>
+<script type="text/javascript" src="jquery-3.7.1.min.js"></script>
 	<style type="text/css">
 	body{
 	background-image:url("dabeijing.jpg");
@@ -334,63 +335,52 @@
 		
 	</style>
     <script type="text/javascript">
-      var index = 1;
-      window.onload = function(){
-        for(var i=1;i<=6;i++){
-          document.getElementById("li"+i).onclick = function(){
-			index = this.id.replace("li","");
-            setAnimate();
-          }
-        }
-		document.addEventListener('DOMMouseScroll',mousewheel,false);
-        window.onmousewheel = mousewheel;
-      }
-	  
-	  function mousewheel(e){
-        e.preventDefault();//通知浏览器不执行默认的动作
-        if(e.wheelDelta){
-          //IE/Opera/Chrome
-          if(e.wheelDelta < 0){
-           
-			  index++;
-          }
-          else{
-          
-			  index--;
-          }
-        }
-        else if(e.detail){
-          //Firefox
-          if(e.detail < 0){
-            
-			  index--;
-          }
-          else{
-          
-			  index++;
-          }
-        }
-		  setAnimate();
-      }
-	  
-	  function setAnimate(){
-		  //设置index范围
-		  if(index > 6){
-          index = 6;
-        }
-        if(index < 1){
-          index = 1;
-        }
-		var offsetHeight = document.getElementById("imgBox").offsetHeight;
-		 document.getElementById("mainDiv").style.top = -(offsetHeight * (index-1))+"px";
-		for(var i=1;i<=6;i++){
-          document.getElementById("li"+i).style.backgroundColor = "#3D3D3D";
-          document.getElementById("li"+i).style.opacity = 0.5;
-        }
-        document.getElementById("li"+index).style.backgroundColor = "#10508D";
-        document.getElementById("li"+index).style.opacity = 1;
-      }
-      
+$(document).ready(function() {  
+    var index = 1;  
+    // 为每个li元素绑定点击事件  
+    for (var i = 1; i <= 6; i++) {  
+        $("#li" + i).click (function() {  
+            index = $(this).attr('id').replace("li", "");  
+            setAnimate();  
+        });  
+    }  
+
+    // 鼠标滚轮事件处理  
+    $(document).on('mousewheel DOMMouseScroll', function(e) {  
+        e.preventDefault();  
+
+        // 判断滚轮方向  
+        var delta = e.originalEvent.wheelDelta || -e.originalEvent.detail;  
+        
+        if (delta < 0) {  
+            index++;  
+        } else {  
+            index--;  
+        }  
+
+        setAnimate();  
+    });  
+
+    function setAnimate() {  
+        // 限制index范围  
+        index = Math.min(Math.max(index, 1), 6);  
+        // 设置偏移量  
+        var offsetHeight = $("#imgBox").height();  
+        $("#mainDiv").css('top', -(offsetHeight * (index - 1)) + "px");  
+        // 重置li样式  
+        for (var i = 1; i <= 6; i++) {  
+            $("#li" + i).css({  
+                'backgroundColor': '#3D3D3D',  
+                'opacity': 0.5  
+            });  
+        }  
+        // 设置当前li样式  
+        $("#li" + index).css({  
+            'backgroundColor': '#10508D',  
+            'opacity': 1  
+        });  
+    }  
+});
     </script>
 </head>
 
@@ -410,12 +400,12 @@
 	<div id="imgBox">
 		<div id="wenzhitishi">提示：可以鼠标滚轮切换图片</div>
 	    <div id="mainDiv">
-      		<div class="page1"></div>
-      		<div class="page2"></div>
-      		<div class="page3"></div>
-      		<div class="page4"></div>
-			<div class="page5"></div>
-			<div class="page6"></div>
+      		<a href="web2-1/web2-1.1/heihun.html"><div class="page1"></div></a>
+      		<a href="web2-1/web2-1.1/heihun2.html"><div class="page2"></div></a>
+      		<a href="web2-1/web2-1.1/heihun3.html"><div class="page3"></div></a>
+      		<a href="web2-1/web2-1.1/fahuan.html"><div class="page4"></div></a>
+			<a href="web2-1/web2-1.1/renwang.html"><div class="page5"></div></a>
+			<a href="web2-1/web2-1.1/p.html"><div class="page6"></div></a>
     	</div>
 		<div class="btn_list">
 			<ul>
@@ -443,30 +433,6 @@
 		</div>
 		
 
-		
-<!--
-		<script>  
-    		function youxi1change(e) {  
-        		e.style.backgroundImage = "url('hunlei1.png')";  
-    		}  
-			function youxi1re(e){
-				e.style.backgroundImage = "url('hunlei.png')";
-			}
-			function youxi2change(e) {  
-        		e.style.backgroundImage = "url('leihun1.png')";  
-    		}  
-			function youxi2re(e){
-				e.style.backgroundImage = "url('leihun.png')";
-			}
-			function youxi3change(e) {  
-        		e.style.backgroundImage = "url('qita1.png')";  
-    		}  
-			function youxi3re(e){
-				e.style.backgroundImage = "url('qita.png')";
-			}
-		</script>  
--->
-
 		<div id="id5">
 			<a href="web2-1/index1.html" id="youxi1" onmouseover="youxi1change(this)" onmouseout="youxi1re(this)"></a>
 			<a href="#" id="youxi2" onmouseover="youxi2change(this)" onmouseout="youxi2re(this)"></a>
@@ -476,19 +442,19 @@
 		
 	</div>
 	<script type="text/javascript">  
-	function kongzhi() {  
-		var kongzhikaiguan = document.getElementById("yinyue");  
-		var yinyue = document.getElementById("aud");   
-		var currentSrc = kongzhikaiguan.src.split('/').pop();   
+function kongzhi() {  
+    var $kongzhikaiguan = $("#yinyue");  
+    var $yinyue = $("#aud");  
+    var currentSrc = $kongzhikaiguan.attr("src").split('/').pop();  
 
-		if (currentSrc === "001.png") {  
-			yinyue.play();  
-			kongzhikaiguan.src = "002.png"; 
-		} else {  
-			yinyue.pause(); 
-			kongzhikaiguan.src = "001.png"; 
-		}  
-	}  
+    if (currentSrc === "001.png") {  
+        $yinyue[0].play();  
+        $kongzhikaiguan.attr("src", "002.png");  
+    } else {  
+        $yinyue[0].pause();  
+        $kongzhikaiguan.attr("src", "001.png");  
+    }  
+} 
 	</script>  
 	<audio src="beijingyinyue.mp3" id="aud" loop></audio>  
 	<div id="yinyuehezhi"><img id="yinyue" src="001.png" onclick="kongzhi()"><br/>↑音乐开关</div>
