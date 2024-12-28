@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>魂系游戏-魂类</title>
+	<style type="text/css">
+	body{
+	background-image:url("../beijing.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	}
+	#nav{
+			display:flex;
+			background:rgba(0,0,0,.8);
+			width: 100%;
+			height: 50px;
+			justify-content: space-around;
+			align-items: center;
+			margin-left: auto;
+			margin-right: auto;
+		    border-radius: 5px;
+			
+		}
+	#img1{
+			height: 50px;
+		}
+	#index{
+			display: block;
+			float: left;
+			width: 90px;
+			height: 30px;
+			line-height:30px;
+			text-align: center;
+			font-size: 20px;
+			color:#C5C5C5;
+			text-decoration: none;
+			background-image: url("../xue.png");
+			background-size: 90px 48px;
+	
+	
+		}
+	.normal{
+			display: block;
+			float: left;
+			width: 90px;
+			height: 30px;
+			line-height:30px;
+			text-align: center;
+			font-size: 20px;
+			color:#C5C5C5;
+			text-decoration: none;
+		}
+		.normal:hover{
+			background-image: url("../xue.png");
+			background-size: 90px 48px;
+			
+		}
+		
+		#youxijies{
+			position:absolute;
+			width: 64%;
+			height: 90%;
+			top:60px;
+			background:rgba(0,0,0,.8);
+			font-size:1.2vw;
+			color:aliceblue;
+		}
+
+		#youxixiazai{
+			position:absolute;
+			width: 35.5%;
+			height: 90%;
+			top:60px;
+			right: 0;
+			background:rgba(255,255,255,.5);
+		}
+		#tupian{
+			position:absolute;
+			width: 80%;
+			left: 50%;
+			top:45px;
+			transform:translate(-50%,0);
+			
+		}
+
+
+		#yinyue{
+			position:absolute;
+			width:50px;
+			top:1%;
+			right:2%;
+			
+		}
+		#xiazai{
+			position:absolute;
+			width: 40%;
+			left: 50%;
+			top:50%;
+			transform:translate(-50%,0);
+			text-align: center;
+			background: #F9D823;
+			
+			
+		}
+	</style>
+</head>
+	
+<body>
+	<div id ="nav"> 
+		<img  id = "img1" src="../R-C.jpg"/>
+	    <a href="../../index.html" class="normal">首页</a>
+		<a href="../index1.html" class="normal">魂类</a>
+		<a href="#" id="index">类魂</a>
+		<a href="#" class="normal">其他</a>
+	</div>
+	
+	<div id="youxijies">
+		<h1>游戏介绍:</h1>
+		《仁王》是由光荣特库摩名下工作室Team NINJA开发的一款动作角色扮演游戏，于2017年2月9日发售，续作为《仁王2》。<br/>
+故事结合了日本自古流传的各式妖怪登场的黑暗奇幻要素与日本战国时代末期的史实而成，讲述了主角威廉为寻找某人而辗转前往日本所发生的故事。<br/><br/>
+		<h1>背景设定:</h1>
+			潜藏着庞大力量的“奇迹之石”精华，知晓其力量的英格兰资深学者约翰·迪伊为讨好与西班牙争夺霸权的英格兰女王，将精华投入战争，并以此获得权力。如此深信的约翰·迪伊暗地里找来了精通精华秘术的炼金术师爱德华·凯瑞。由于精华仅能于喋血之地采集，他们便将目光放向因前所未有的战乱而动荡不安的遥远岛国日本。游戏的主人公威廉因知晓军事机密一事而被关入大牢。由于守护灵瑟夏被凯瑞夺走，越狱后的威廉决意追踪凯瑞寻回守护灵，由此漂洋过海来到日本。而此时的日本由于天下人秀吉亡故，如今这个国家由石田三成和德川家康两位武士争夺着霸权，由此充满了死亡与异象。
+
+	</div>
+	<div id="youxixiazai">
+		<img  id="tupian" src="renwang.jpg"/>
+		<a href="https://www.gamer520.com/14752.html"><input id="xiazai" type="button" value="点击下载"/></a>
+	</div>
+
+	<script type="text/javascript">  
+	function kongzhi() {  
+		var kongzhikaiguan = document.getElementById("yinyue");  
+		var yinyue = document.getElementById("aud");   
+		var currentSrc = kongzhikaiguan.src.split('/').pop();   
+
+		if (currentSrc === "001.png") {  
+			yinyue.play();  
+			kongzhikaiguan.src = "../../002.png"; 
+		} else {  
+			yinyue.pause(); 
+			kongzhikaiguan.src = "../../001.png"; 
+		}  
+	}  
+	</script>  
+	<audio src="../../beijingyinyue.mp3" id="aud" loop></audio>  
+	<img id="yinyue" src="../../001.png" onclick="kongzhi()">
+	
+</body>	
+	
+	
+	
+	
+</html>

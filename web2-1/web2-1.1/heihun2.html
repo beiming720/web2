@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>魂系游戏-魂类</title>
+	<style type="text/css">
+	body{
+	background-image:url("../beijing.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	}
+	#nav{
+			display:flex;
+			background:rgba(0,0,0,.8);
+			width: 100%;
+			height: 50px;
+			justify-content: space-around;
+			align-items: center;
+			margin-left: auto;
+			margin-right: auto;
+		    border-radius: 5px;
+			
+		}
+	#img1{
+			height: 50px;
+		}
+	#index{
+			display: block;
+			float: left;
+			width: 90px;
+			height: 30px;
+			line-height:30px;
+			text-align: center;
+			font-size: 20px;
+			color:#C5C5C5;
+			text-decoration: none;
+			background-image: url("../xue.png");
+			background-size: 90px 48px;
+	
+	
+		}
+	.normal{
+			display: block;
+			float: left;
+			width: 90px;
+			height: 30px;
+			line-height:30px;
+			text-align: center;
+			font-size: 20px;
+			color:#C5C5C5;
+			text-decoration: none;
+		}
+		.normal:hover{
+			background-image: url("../xue.png");
+			background-size: 90px 48px;
+			
+		}
+		
+		#youxijies{
+			position:absolute;
+			width: 64%;
+			height: 90%;
+			top:60px;
+			background:rgba(0,0,0,.8);
+			font-size:1.2vw;
+			color:aliceblue;
+		}
+
+		#youxixiazai{
+			position:absolute;
+			width: 35.5%;
+			height: 90%;
+			top:60px;
+			right: 0;
+			background:rgba(255,255,255,.5);
+		}
+		#tupian{
+			position:absolute;
+			width: 80%;
+			left: 50%;
+			top:45px;
+			transform:translate(-50%,0);
+			
+		}
+
+
+		#yinyue{
+			position:absolute;
+			width:50px;
+			top:1%;
+			right:2%;
+			
+		}
+		#xiazai{
+			position:absolute;
+			width: 40%;
+			left: 50%;
+			top:50%;
+			transform:translate(-50%,0);
+			text-align: center;
+			background: #F9D823;
+			
+			
+		}
+	</style>
+</head>
+	
+<body>
+	<div id ="nav"> 
+		<img  id = "img1" src="../R-C.jpg"/>
+	    <a href="../../index.html" class="normal">首页</a>
+		<a href="../index1.html" id="index">魂类</a>
+		<a href="#" class="normal">类魂</a>
+		<a href="#" class="normal">其他</a>
+	</div>
+	
+	<div id="youxijies">
+		<h1>游戏介绍:</h1>
+		《黑暗之魂Ⅱ：原罪学者》是由From Software开发，Bandai Namco Games Inc.发行的一款动作角色扮演游戏，于2015年4月2日全平台发售。<br/>
+《黑暗之魂Ⅱ：原罪学者》设定在前作《黑暗之魂》的数个时代后，故事发生在一片名叫多兰古雷格的国家土地上，玩家扮演不死人来到这片大地寻找解除不死人诅咒的方法。<br/>
+《黑暗之魂Ⅱ：原罪学者》是原版的最终发行版本，游戏保留了原版《黑暗之魂Ⅱ》的所有内容，并在此基础上进行了优化和强化，游戏整合了原版的三款资料片，游戏的物品和敌人进行了部分改动，画质也进行了解析强化，支持更高的帧率。<br/><br/>
+		<h1>背景设定:</h1>
+			假如有人登上王座，渴望的会是什么？<br/>
+是焚烧自己的灵魂，让世界在光明中轮回下去？还是单纯看着王座的大门缓缓关闭，等待四周陷入黑暗，让世界不再轮回？<br/>
+这一切，只有登上王座的人才知道。<br/>
+	</div>
+	<div id="youxixiazai">
+		<img  id="tupian" src="heihun2.jpg"/>
+		<a href="https://www.gamer520.com/15941.html"><input id="xiazai"  type="button" value="点击下载"/></a>
+	</div>
+
+	<script type="text/javascript">  
+	function kongzhi() {  
+		var kongzhikaiguan = document.getElementById("yinyue");  
+		var yinyue = document.getElementById("aud");   
+		var currentSrc = kongzhikaiguan.src.split('/').pop();   
+
+		if (currentSrc === "001.png") {  
+			yinyue.play();  
+			kongzhikaiguan.src = "../../002.png"; 
+		} else {  
+			yinyue.pause(); 
+			kongzhikaiguan.src = "../../001.png"; 
+		}  
+	}  
+	</script>  
+	<audio src="../../beijingyinyue.mp3" id="aud" loop></audio>  
+	<img id="yinyue" src="../../001.png" onclick="kongzhi()">
+	
+</body>	
+	
+	
+	
+	
+</html>

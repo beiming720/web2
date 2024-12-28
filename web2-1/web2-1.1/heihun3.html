@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>魂系游戏-魂类</title>
+	<style type="text/css">
+	body{
+	background-image:url("../beijing.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	}
+	#nav{
+			display:flex;
+			background:rgba(0,0,0,.8);
+			width: 100%;
+			height: 50px;
+			justify-content: space-around;
+			align-items: center;
+			margin-left: auto;
+			margin-right: auto;
+		    border-radius: 5px;
+			
+		}
+	#img1{
+			height: 50px;
+		}
+	#index{
+			display: block;
+			float: left;
+			width: 90px;
+			height: 30px;
+			line-height:30px;
+			text-align: center;
+			font-size: 20px;
+			color:#C5C5C5;
+			text-decoration: none;
+			background-image: url("../xue.png");
+			background-size: 90px 48px;
+	
+	
+		}
+	.normal{
+			display: block;
+			float: left;
+			width: 90px;
+			height: 30px;
+			line-height:30px;
+			text-align: center;
+			font-size: 20px;
+			color:#C5C5C5;
+			text-decoration: none;
+		}
+		.normal:hover{
+			background-image: url("../xue.png");
+			background-size: 90px 48px;
+			
+		}
+		
+		#youxijies{
+			position:absolute;
+			width: 64%;
+			height: 90%;
+			top:60px;
+			background:rgba(0,0,0,.8);
+			font-size:1.2vw;
+			color:aliceblue;
+		}
+
+		#youxixiazai{
+			position:absolute;
+			width: 35.5%;
+			height: 90%;
+			top:60px;
+			right: 0;
+			background:rgba(255,255,255,.5);
+		}
+		#tupian{
+			position:absolute;
+			width: 80%;
+			left: 50%;
+			top:45px;
+			transform:translate(-50%,0);
+			
+		}
+
+
+		#yinyue{
+			position:absolute;
+			width:50px;
+			top:1%;
+			right:2%;
+			
+		}
+		#xiazai{
+			position:absolute;
+			width: 40%;
+			left: 50%;
+			top:50%;
+			transform:translate(-50%,0);
+			text-align: center;
+			background: #F9D823;
+			
+			
+		}
+	</style>
+</head>
+	
+<body>
+	<div id ="nav"> 
+		<img  id = "img1" src="../R-C.jpg"/>
+	    <a href="../../index.html" class="normal">首页</a>
+		<a href="../index1.html" id="index">魂类</a>
+		<a href="#" class="normal">类魂</a>
+		<a href="#" class="normal">其他</a>
+	</div>
+	
+	<div id="youxijies">
+		<h1>游戏介绍:</h1>
+		《黑暗之魂3》是由From Software开发的一款动作角色扮演类游戏，是《黑暗之魂》系列的游戏之一，先于2016年3月24日在日本地区全平台发行，随后于2016年4月12日在全球范围内发行。<br/>
+后续DLC艾雷德尔之烬和环印城分别于2016年10月25日和2017年3月28日全平台同步发布。<br/>
+游戏的主要舞台为洛斯里克王国。在那里，玩家肩负着阻止末世来临的使命，而末世则是由于火之纪元和那些前代黑暗印记持有者之间的冲突所引发的。为了应对这一事态，玩家需要去面对薪王——那些曾经传过火的英雄。无论结局如何，世界始终会在光与暗之间轮转。<br/><br/>
+		<h1>背景设定:</h1>
+			在久远之前，世界本是一片混沌，不分天地，只有灰色的岩石、高耸的大树和不朽古龙，一切均笼罩在一片灰雾之中。
+然而某一天，某棵大树的底下出现了最初之火的火炉，这样世界上就有了光与暗，然后受到火的吸引，有生物从黑暗之中诞生。
+	</div>
+	<div id="youxixiazai">
+		<img  id="tupian" src="heihun3.jpg"/>
+		<a href="https://www.gamer520.com/41232.html"><input id="xiazai" type="button" value="点击下载" /></a>
+	</div>
+
+	<script type="text/javascript">  
+	function kongzhi() {  
+		var kongzhikaiguan = document.getElementById("yinyue");  
+		var yinyue = document.getElementById("aud");   
+		var currentSrc = kongzhikaiguan.src.split('/').pop();   
+
+		if (currentSrc === "001.png") {  
+			yinyue.play();  
+			kongzhikaiguan.src = "../../002.png"; 
+		} else {  
+			yinyue.pause(); 
+			kongzhikaiguan.src = "../../001.png"; 
+		}  
+	}  
+	</script>  
+	<audio src="../../beijingyinyue.mp3" id="aud" loop></audio>  
+	<img id="yinyue" src="../../001.png" onclick="kongzhi()">
+	
+</body>	
+	
+	
+	
+	
+</html>
